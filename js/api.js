@@ -7,7 +7,7 @@ function buscarPeliculas() {
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
-            displayResultado(data);
+            generateMovieCards(data.Search);
         })
         .catch(error => {
             console.error('Error en la solicitud a la API:', error);
@@ -15,23 +15,28 @@ function buscarPeliculas() {
         });
 }
 
-function displayResultado(data) {
-    const resultadoContainer = document.querySelector('#resultado');
-    resultadoContainer.innerHTML = '';
+function generateMovieCards(movies) {
+    const movieCardsContainer = document.querySelector('#movie-cards');
+    movieCardsContainer.innerHTML = '';
 
-    if (data.Error) {
-        displayError(data.Error);
-    } else {
-        data.Search.forEach(movie => {
-            const elementoPelicula = document.createElement('div');
-            elementoPelicula.innerHTML = `
-                <h3>${movie.Title} (${movie.Year})</h3>
-                <p>Type: ${movie.Type}</p>
-                <img src="${movie.Poster}" alt="${movie.Title} Poster">
-                ${movie.Plot ? `<p>Descripción: ${movie.Plot}</p>` : '<p>No hay descripción disponible</p>'}
+    if (movies) {
+        movies.forEach(movie => {
+            const cardCol = document.createElement('div');
+            cardCol.classList.add('col');
+            cardCol.innerHTML = `
+                <div class="card" id="movie-${movie.imdbID}">
+                    <img src="${movie.Poster}" class="card-img-top" alt="${movie.Title} Poster">
+                    <div class="card-body">
+                        <h5 class="card-title">${movie.Title} (${movie.Year})</h5>
+                        <p>Type: ${movie.Type}</p>
+                        ${movie.Plot ? `<p>Descripción: ${movie.Plot}</p>` : '<p>No hay descripción disponible</p>'}
+                    </div>
+                </div>
             `;
-            resultadoContainer.appendChild(elementoPelicula);
+            movieCardsContainer.appendChild(cardCol);
         });
+    } else {
+        displayError('No se encontraron resultados');
     }
 }
 

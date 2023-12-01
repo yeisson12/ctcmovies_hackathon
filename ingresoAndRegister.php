@@ -24,5 +24,6 @@ if (mysqli_num_rows($validate_login)  > 0) {
     ';
   exit;
 }
+?>
 
 // -----------------------------------------------------Registro
