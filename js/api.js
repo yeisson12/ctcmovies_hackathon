@@ -29,6 +29,7 @@ async function buscarPeliculas(categoria) {
     }
 }
 
+
 async function actualizarConIdYoutube(movies) {
     for (const movie of movies) {
         movie.youtubeID = await obtenerIdYoutube(movie.Title);
@@ -68,7 +69,7 @@ function generateMovieCards(movies) {
                 <div class="card">
                     <h5 class="Titulo">${movie.Title}</h5>
                     <h5 class="year">${movie.Year}</h5>
-                    <button class="view-details" onclick="showDetails('${movie.imdbID}')">Ver Detalles</button>
+                    <button class="view-details" onclick="showDetails('${movie.imdbID}', '${movie.youtubeID}')">Ver Detalles</button>
                 </div>
             </div>
         `;
@@ -76,7 +77,9 @@ function generateMovieCards(movies) {
     });
 }
 
+
 function watchTrailer(youtubeID) {
+    console.log(youtubeID);
     if (youtubeID) {
         const youtubeLink = `https://www.youtube.com/watch?v=${youtubeID}`;
 
@@ -87,14 +90,13 @@ function watchTrailer(youtubeID) {
     }
 }
 
-function showDetails(movieId) {
+function showDetails(movieId, youtubeID) {
     const apiUrl = `http://www.omdbapi.com/?apikey=${apiKey}&i=${movieId}`;
 
     fetch(apiUrl)
         .then(response => response.json())
         .then(movie => {
             // Llenar elementos en el modal con la información de la película
-
             document.querySelector('#movieTitle').textContent = `${movie.Title} (${movie.Year})`;
             document.querySelector('#moviePlot').textContent = `Descripción: ${movie.Plot}`;
             document.querySelector('#movieDirector').textContent = `Director: ${movie.Director}`;
@@ -102,8 +104,11 @@ function showDetails(movieId) {
             document.querySelector('#movieRating').textContent = `Calificación IMDB: ${movie.imdbRating}`;
 
             const trailerIframe = document.querySelector('#trailerIframe');
-            trailerIframe.src = `https://www.youtube.com/embed/${movie.youtubeID}?autoplay=1`;
-
+            if (youtubeID) {
+                trailerIframe.src = `https://www.youtube.com/embed/${youtubeID}?autoplay=1`;
+            } else {
+                trailerIframe.src = ''; // Manejar el caso en el que no hay un tráiler disponible
+            }
 
             const movieDetailsModal = new bootstrap.Modal(document.querySelector('#movieDetailsModal'));
             movieDetailsModal.show();
@@ -113,3 +118,6 @@ function showDetails(movieId) {
             // Manejo de errores
         });
 }
+
+
+
