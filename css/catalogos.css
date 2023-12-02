@@ -1,0 +1,259 @@
+/*Carrusel top dies*/
+a {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #e5e5e5;
+}
+
+.catalogo-top {
+    margin: 70px;
+}
+
+/* Contenedor titulo y controles*/
+.top-titulo-controles {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.catalogo-top .top-titulo-controles .indicadores button {
+    background: white;
+    width: 10px;
+    height: 3px;
+    cursor: pointer;
+    border: none;
+    margin-right: 2px;
+}
+
+.catalogo-top .top-titulo-controles .indicadores button:hover,
+.catalogo-top .top-titulo-controles .indicadores button.activo {
+    background-color: red;
+
+}
+
+.catalogo-top .catalogo-principal {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.catalogo-top .catalogo-principal .topLeft,
+.catalogo-top .catalogo-principal .topRigth {
+    position: absolute;
+    border: none;
+    background: rgb(255, 255, 255, 0.3);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height: 40px;
+    width: 50px;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+    transition: .2s ease all;
+    scroll-behavior: smooth;
+}
+
+.catalogo-top .catalogo-principal .topLeft:hover,
+.catalogo-top .catalogo-principal .topRigth:hover {
+    background: rgb(255, 255, 255, 0.9);
+}
+
+.catalogo-top .catalogo-principal .topLeft {
+    left: 0;
+}
+
+.catalogo-top .catalogo-principal .topRigth {
+    right: 0;
+}
+
+/* Carrusel */
+
+.catalogo-principal .peliculas {
+    width: 100%;
+    height: 200px;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+
+.catalogo-principal .peliculas .peliculas-top {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.catalogo-principal .peliculas .peliculas-top {
+    min-width: 20%;
+    transition: .3 ease all;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+}
+
+.catalogo-principal .peliculas .peliculas-top.hover {
+    transform: scale(1.2);
+    vertical-align: center;
+}
+
+.catalogo-principal .peliculas .peliculas-top .top-numero img,
+.catalogo-principal .peliculas .peliculas-top .caratula-top img {
+    vertical-align: top;
+}
+
+.top-numero img {
+    object-fit: cover;
+    object-position: center;
+    width: 80px;
+}
+
+.caratula-top {
+    height: 138px;
+}
+
+.caratula-top img {
+    object-fit: contain;
+    border-radius: 2px;
+}
+
+/*Catalogos*/
+.catalogos {
+    padding-block: 2px;
+    background-color: #141414;
+    color: white;
+}
+
+.catalogo-peliculas {
+    width: 95%;
+    margin-inline: auto;
+}
+.catalogo-peliculas-2 {
+    width: 95%;
+    margin-inline: auto;
+}
+
+.catalogo-peliculas h1,
+.catalogo-peliculas h2 {
+    padding: 10px;
+}
+
+.peliculas {
+    overflow-x: scroll;
+    display: flex;
+    gap: 12px;
+}
+
+
+
+.pelicula {
+    min-width: 200px;
+    height: auto;
+    position: relative;
+    /* Ajusta el ancho según tus necesidades */
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+
+.pelicula:hover {
+    transform: scale(1.2);
+}
+
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider-container-2 {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.peliculas::-webkit-scrollbar {
+    display: none;
+    }
+    
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    position: relative;
+    min-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+img,
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.videoOverlay,
+.playButton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.playButton {
+    color: #fff;
+    font-size: 3em;
+    cursor: pointer;
+}
+
+.pelicula:hover .videoOverlay {
+    opacity: 1;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
