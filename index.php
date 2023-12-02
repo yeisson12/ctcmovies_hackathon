@@ -116,6 +116,20 @@
           </div>
       </div>
     </section>
+
+    <section class="catalogo-peliculas">
+      <h2>Peliculas de Estreno</h2>
+      <div class="slider-container">
+          <div class="slider">
+              <div class="slide peliculas slide-uno" id="estreno">
+              </div>
+              <div class="overlay">
+              </div>
+              <div class="prev" onclick="prevSlide3()">&#10094;</div>
+              <div class="next" onclick="nextSlide3()">&#10095;</div>
+          </div>
+      </div>
+  </section>
     
     <section class="catalogo-peliculas">
       <h2>Tendencias</h2>

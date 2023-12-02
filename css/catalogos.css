@@ -143,6 +143,7 @@ a {
 
 
 .pelicula {
+    border-radius: 10px;
     min-width: 200px;
     height: auto;
     position: relative;

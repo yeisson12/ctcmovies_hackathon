@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     const responses = await Promise.all(links.map(peticion => fetch(peticion)));
     const catologos = await Promise.all(responses.map(r => r.json()));
 
-    const [catalogoUno, catalogoDos,] = catologos;
+    const [catalogoUno, catalogoDos, catalogoTres] = catologos;
 
     function construirCatalogo(contenedor, catalogo) {
         catalogo.results.forEach(pelicula => {
@@ -69,9 +69,12 @@ document.addEventListener('DOMContentLoaded', async function () {
     const populares = document.querySelector('#populares');
     construirCatalogo(populares, catalogoUno);
 
+    const estrenos = document.querySelector('#estreno');
+    construirCatalogo(estrenos, catalogoDos);
+
     // Catalogo tres
     const vistas = document.querySelector('#vistas');
-    construirCatalogo(vistas, catalogoDos);
+    construirCatalogo(vistas, catalogoTres);
 });
 
 document.addEventListener('DOMContentLoaded', function () {
