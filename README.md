@@ -46,3 +46,27 @@ Visita `http://localhost:3000` en tu navegador.
 Este proyecto está bajo la [Licencia XYZ](enlace_a_licencia).
 
 ## Contacto
+4. Generación de Tarjetas de Películas (generateMovieCards)
+La función generateMovieCards crea tarjetas de películas dinámicamente y las muestra en la interfaz de usuario, con información como título, año y un botón para ver detalles.
+
+5. Ver Detalles y Ver Tráiler (showDetails y watchTrailer)
+Estas funciones permiten al usuario ver detalles completos de una película, incluida la trama, el director, el elenco y la calificación IMDb. También se proporciona un enlace para ver el tráiler de YouTube.
+
+# Interfaz de Usuario
+La interfaz de usuario incluye una barra de navegación, una sección para seleccionar categorías, una barra de búsqueda, y una sección para mostrar las tarjetas de películas. Se utiliza Bootstrap para mejorar el diseño y la responsividad.
+
+# Uso
+Ingresar un término de búsqueda y seleccionar una categoría.
+Hacer clic en "Buscar" para obtener resultados.
+Explorar las tarjetas de películas y hacer clic en "Ver Detalles" para obtener información adicional.
+En la vista de detalles, hacer clic en "Ver Tráiler" para ver el tráiler de YouTube.
+
+# Tecnologías Utilizadas
+HTML5,
+CSS3,
+JavaScript (ES6+),
+Bootstrap,
+PHP (para la autenticación)
+
+# Conclusión
+El proyecto CTCMovies busca proporcionar a los usuarios una experiencia intuitiva y atractiva para explorar información y trailers de películas. El código se ha documentado para facilitar la comprensión y colaboración entre desarrolladores.
