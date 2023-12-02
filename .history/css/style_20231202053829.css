@@ -10,8 +10,6 @@ header{
     flex-wrap: nowrap;
     overflow-x: auto;
     scroll-behavior: smooth;
-
-    background-color: blue;
 }
 
 .scrolling-card {

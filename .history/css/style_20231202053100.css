@@ -10,8 +10,6 @@ header{
     flex-wrap: nowrap;
     overflow-x: auto;
     scroll-behavior: smooth;
-
-    background-color: blue;
 }
 
 .scrolling-card {
@@ -21,15 +19,12 @@ text-align: center;
 }
 
 #recommendedMoviesCarousel{
+    background-color:blue
 
-
-    height: 150px;
-
-    background-color: rgba(220, 20, 60, 0.73)
 }
 
 .scrolling-container::-webkit-scrollbar {
-
+display: none;
 }
 
 button {
