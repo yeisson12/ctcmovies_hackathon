@@ -12,21 +12,16 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">CTCMovies</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <input class="form-control me-2" type="search" id="ingresarPelicula" placeholder="Busca una película"
-                        aria-label="Search">
-                    <button class="btn btn-outline-success" onclick="buscarPeliculas()">Buscar</button>
-                    <button class="btn btn-outline-danger" href="cerrar.php">Cerrar sesión</button>
-                </div>
-            </div>
-        </nav>
+    <nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand">Navbar</a>
+    <div class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" id="ingresarPelicula" aria-label="Search">
+      <button class="btn btn-outline-success"  onclick="buscarPeliculas()">Search</button>
+    </div>
+  </div>
+</nav>
+        
     </header>
 
     <section>
