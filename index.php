@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -21,7 +21,8 @@
           </a>
           <div class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Buscar" id="ingresarPelicula" aria-label="Search">
-            <button class="btn btn-outline-success"  onclick="buscarPeliculas()">Buscar</button>
+            <button class="btn btn-buscar btn-outline-success"  onclick="buscarPeliculas()">Buscar</button>
+            <button class="btn btn-buscar btn-outline-danger"><a class="nav-link" href="close.php">Cerrar </a></button>
           </div>
         </div>
       </nav>
@@ -31,12 +32,12 @@
       <ul class="scrolling-container">
         <il class="scrolling-card">
           <button>
-            <a class="cag" href="">Acción</a>
+            <a class="cag" id="accion" href="#">Acción</a>
           </button>
         </il>
         <il class="scrolling-card">
           <button>
-            <a class="cag" href="">Aventura</a>
+            <a class="cag" id="aventura" href="#">Aventura</a>
           </button>
         </il>
         <il class="scrolling-card">
@@ -136,7 +137,7 @@
     </section>
 
 <!-- Modal para mostrar detalles de la película -->
-<div class="modal" tabindex="-1" id="movieDetailsModal">
+<div class="modal fade" tabindex="-1" id="movieDetailsModal">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -149,6 +150,7 @@
         <p id="movieDirector"></p>
         <p id="movieCast"></p>
         <p id="movieRating"></p>
+        <iframe id="trailerIframe" width="auto" height="auto" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
   </div>
