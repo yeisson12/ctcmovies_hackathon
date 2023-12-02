@@ -1,0 +1,359 @@
+.component-1,
+.component-1 * {
+  box-sizing: border-box;
+}
+.component-1 {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.rectangle-1 {
+  background: #636363;
+  position: absolute;
+  right: 0.1%;
+  left: 0%;
+  width: 99.9%;
+  bottom: 0%;
+  top: 4.29%;
+  height: 95.71%;
+}
+.mask-group {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-2 {
+  background: #989797;
+  position: absolute;
+  right: 0.1%;
+  left: 0%;
+  width: 99.9%;
+  bottom: 91.25%;
+  top: 0%;
+  height: 8.75%;
+}
+.rectangle-4 {
+  background: #d9d9d9;
+  border-radius: 10px;
+  position: absolute;
+  right: 12.44%;
+  left: 70.91%;
+  width: 16.65%;
+  bottom: 93.04%;
+  top: 2.5%;
+  height: 4.46%;
+}
+.icon-magnifying-glass {
+  height: auto;
+  position: absolute;
+  right: 24.69%;
+  left: 73.4%;
+  width: 1.91%;
+  bottom: 93.57%;
+  top: 2.86%;
+  height: 3.57%;
+  transform: translate(-20px, 0px);
+  overflow: visible;
+}
+.iniciar {
+  color: #ffffff;
+  text-align: left;
+  font: 400 12px "Inter-Regular", sans-serif;
+  position: absolute;
+  right: 2.3%;
+  left: 92.82%;
+  width: 4.88%;
+  bottom: 94.46%;
+  top: 3.04%;
+  height: 2.5%;
+}
+.icon-person {
+  height: auto;
+  position: absolute;
+  right: 8.1%;
+  left: 89.95%;
+  width: 1.95%;
+  bottom: 94.46%;
+  top: 2.32%;
+  height: 3.21%;
+  overflow: visible;
+}
+.ctc-movies {
+  color: #ffffff;
+  text-align: left;
+  font: 700 16px "Inter-Bold", sans-serif;
+  position: absolute;
+  right: 83.83%;
+  left: 5.45%;
+  width: 10.72%;
+  bottom: 92.68%;
+  top: 2.86%;
+  height: 4.46%;
+}
+.peliculas {
+  color: #ffffff;
+  text-align: left;
+  font: 700 16px "Inter-Bold", sans-serif;
+  position: absolute;
+  right: 71.29%;
+  left: 21.34%;
+  width: 7.37%;
+  bottom: 93.21%;
+  top: 2.86%;
+  height: 3.93%;
+}
+.icon-home {
+  height: auto;
+  position: absolute;
+  right: 94.55%;
+  left: 3.25%;
+  width: 2.2%;
+  bottom: 93.93%;
+  top: 2.5%;
+  height: 3.57%;
+  overflow: visible;
+}
+.icon-video {
+  height: auto;
+  position: absolute;
+  right: 78.95%;
+  left: 18.47%;
+  width: 2.58%;
+  bottom: 93.93%;
+  top: 3.39%;
+  height: 2.68%;
+  overflow: visible;
+}
+.rectangle-5 {
+  background: #d9d9d9;
+  border-radius: 5px;
+  position: absolute;
+  right: 85.55%;
+  left: 3.25%;
+  width: 11.2%;
+  bottom: 41.43%;
+  top: 27.68%;
+  height: 30.89%;
+}
+.rectangle-16 {
+  background: #d9d9d9;
+  border-radius: 5px;
+  position: absolute;
+  right: 87.46%;
+  left: 3.25%;
+  width: 9.28%;
+  bottom: 81.61%;
+  top: 14.64%;
+  height: 3.75%;
+}
+.rectangle-17 {
+  background: #d9d9d9;
+  border-radius: 5px;
+  position: absolute;
+  right: 78.66%;
+  left: 13.88%;
+  width: 7.46%;
+  bottom: 81.61%;
+  top: 14.64%;
+  height: 3.75%;
+}
+.rectangle-18 {
+  background: #d9d9d9;
+  border-radius: 5px;
+  position: absolute;
+  right: 69.28%;
+  left: 22.68%;
+  width: 8.04%;
+  bottom: 81.61%;
+  top: 14.64%;
+  height: 3.75%;
+}
+.rectangle-19 {
+  background: #d9d9d9;
+  border-radius: 5px;
+  position: absolute;
+  right: 58.66%;
+  left: 32.06%;
+  width: 9.28%;
+  bottom: 81.61%;
+  top: 14.64%;
+  height: 3.75%;
+}
+.rectangle-20 {
+  background: #d9d9d9;
+  border-radius: 5px;
+  position: absolute;
+  right: 48.04%;
+  left: 42.68%;
+  width: 9.28%;
+  bottom: 81.61%;
+  top: 14.64%;
+  height: 3.75%;
+}
+.rectangle-21 {
+  background: #d9d9d9;
+  border-radius: 5px;
+  position: absolute;
+  right: 39.43%;
+  left: 53.3%;
+  width: 7.27%;
+  bottom: 81.61%;
+  top: 14.64%;
+  height: 3.75%;
+}
+.rectangle-22 {
+  background: #d9d9d9;
+  border-radius: 5px;
+  position: absolute;
+  right: 29.09%;
+  left: 61.63%;
+  width: 9.28%;
+  bottom: 81.79%;
+  top: 14.46%;
+  height: 3.75%;
+}
+.rectangle-23 {
+  background: #d9d9d9;
+  border-radius: 5px;
+  position: absolute;
+  right: 20.77%;
+  left: 71.96%;
+  width: 7.27%;
+  bottom: 81.61%;
+  top: 14.46%;
+  height: 3.93%;
+}
+.rectangle-13 {
+  background: #d9d9d9;
+  border-radius: 5px;
+  position: absolute;
+  right: 73.59%;
+  left: 3.25%;
+  width: 23.16%;
+  bottom: 4.29%;
+  top: 68.93%;
+  height: 26.79%;
+}
+.rectangle-14 {
+  background: #d9d9d9;
+  border-radius: 5px;
+  position: absolute;
+  right: 47.94%;
+  left: 28.71%;
+  width: 23.35%;
+  bottom: 4.29%;
+  top: 68.93%;
+  height: 26.79%;
+}
+.rectangle-15 {
+  background: #d9d9d9;
+  border-radius: 5px;
+  position: absolute;
+  right: 22.87%;
+  left: 54.55%;
+  width: 22.58%;
+  bottom: 4.29%;
+  top: 68.93%;
+  height: 26.79%;
+}
+.rectangle-8 {
+  background: #d9d9d9;
+  border-radius: 5px;
+  position: absolute;
+  right: 60.48%;
+  left: 28.33%;
+  width: 11.2%;
+  bottom: 41.43%;
+  top: 27.68%;
+  height: 30.89%;
+}
+.rectangle-10 {
+  background: #d9d9d9;
+  border-radius: 5px;
+  position: absolute;
+  right: 47.94%;
+  left: 40.86%;
+  width: 11.2%;
+  bottom: 41.43%;
+  top: 27.68%;
+  height: 30.89%;
+}
+.rectangle-11 {
+  background: #d9d9d9;
+  border-radius: 5px;
+  position: absolute;
+  right: 35.41%;
+  left: 53.4%;
+  width: 11.2%;
+  bottom: 41.43%;
+  top: 27.68%;
+  height: 30.89%;
+}
+.rectangle-12 {
+  background: #d9d9d9;
+  border-radius: 5px;
+  position: absolute;
+  right: 22.87%;
+  left: 65.93%;
+  width: 11.2%;
+  bottom: 41.43%;
+  top: 27.68%;
+  height: 30.89%;
+}
+.rectangle-9 {
+  background: #d9d9d9;
+  border-radius: 5px;
+  position: absolute;
+  right: 73.01%;
+  left: 15.79%;
+  width: 11.2%;
+  bottom: 41.43%;
+  top: 27.68%;
+  height: 30.89%;
+}
+.rectangle-7 {
+  background: #d9d9d9;
+  border-radius: 5px;
+  position: absolute;
+  right: 0%;
+  left: 83.64%;
+  width: 16.36%;
+  bottom: 17.68%;
+  top: 13.04%;
+  height: 69.29%;
+}
+.peliculas-populares {
+  color: #ffffff;
+  text-align: left;
+  font: 700 16px "Inter-Bold", sans-serif;
+  position: absolute;
+  right: 81.53%;
+  left: 3.25%;
+  width: 15.22%;
+  bottom: 74.11%;
+  top: 22.5%;
+  height: 3.39%;
+}
+.peliculas-recientes {
+  color: #ffffff;
+  text-align: left;
+  font: 700 16px "Inter-Bold", sans-serif;
+  position: absolute;
+  right: 81.53%;
+  left: 3.25%;
+  width: 15.22%;
+  bottom: 33.04%;
+  top: 63.57%;
+  height: 3.39%;
+}
+.recomendados {
+  color: #636363;
+  text-align: left;
+  font: 700 16px "Inter-Bold", sans-serif;
+  position: absolute;
+  right: 2.3%;
+  left: 84.88%;
+  width: 12.82%;
+  bottom: 81.79%;
+  top: 14.82%;
+  height: 3.39%;
+}
