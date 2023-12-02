@@ -103,6 +103,37 @@
       </ul>
     </section>
 
+    <section>
+      <div class="pelicula" id="movie-cards">
+        <p id="moviePlot1"></p>
+      <p id="moviePlot"></p>
+      <p id="movieDirector"></p>
+      <p id="movieCast"></p>
+      <p id="movieRating"></p>
+      </div>
+  </section>
+
+<!-- Modal para mostrar detalles de la película -->
+<div class="modal fade" tabindex="-1" id="movieDetailsModal">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="movieTitle"></h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <img id="moviePoster" src="" alt="">
+      <p id="moviePlot"></p>
+      <p id="movieDirector"></p>
+      <p id="movieCast"></p>
+      <p id="movieRating"></p>
+      <iframe id="trailerIframe" width="auto" height="auto" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+</div>
+
+
     <section class="catalogo-peliculas">
       <h2>Peliculas de populares</h2>
       <div class="slider-container">
@@ -142,37 +173,6 @@
           </div>
       </div>
     </section>
-    
-    <section>
-        <div class="pelicula" id="movie-cards">
-          <p id="moviePlot1"></p>
-        <p id="moviePlot"></p>
-        <p id="movieDirector"></p>
-        <p id="movieCast"></p>
-        <p id="movieRating"></p>
-        </div>
-    </section>
-
-<!-- Modal para mostrar detalles de la película -->
-<div class="modal fade" tabindex="-1" id="movieDetailsModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="movieTitle"></h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <img id="moviePoster" src="" alt="">
-        <p id="moviePlot"></p>
-        <p id="movieDirector"></p>
-        <p id="movieCast"></p>
-        <p id="movieRating"></p>
-        <iframe id="trailerIframe" width="auto" height="auto" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-</div>
-
 
 
 <footer class="py-5 mt-5">
