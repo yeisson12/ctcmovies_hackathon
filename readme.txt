@@ -11,9 +11,8 @@ Breve descripción del proyecto.
 - etc.
 
 ## Instalación
-1. Clona el repositorio: `git clone https://github.com/tu_usuario/tu_proyecto.git`
-2. Instala las dependencias: `npm install`
-3. Configura el archivo de entorno (.env) con las variables necesarias.
+1. Clona el repositorio: `git clone https://github.com/yeisson12/ctcmovies_hackathon.git`
+
 
 ## Uso
 Para iniciar el proyecto, ejecuta: `npm start`
