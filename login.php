@@ -15,7 +15,7 @@
                 <h2 class="title">Iniciar Sesión</h2><!-- Iniciar session-  -   -   - -->
                 <div class="input-field">
                     <i class="fas fa-user"></i>
-                    <input type="text" name="email" placeholder="Correo">
+                    <input type="text" name="email" placeholder="Usuario">
                 </div>
                 <div class="input-field">
                     <i class="fas fa-lock"></i>
@@ -28,7 +28,7 @@
                 <h2 class="title">Registrarse</h2><!-- Registro -   -   -   -   -   -   -->
                 <div class="input-field">
                     <i class="fas fa-user"></i>
-                    <input type="text" name="name" placeholder="Usuario">
+                    <input type="text" name="name" placeholder="nombre">
                 </div>
                 <div class="input-field">
                     <i class="fas fa-envelope"></i>
