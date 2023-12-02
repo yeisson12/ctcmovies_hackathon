@@ -1,60 +1,34 @@
 <?php
-require_once("conexion.php");
+include 'conexion.php';
 
-$nameerror = $emailrror =$passerror = "";
-
-$name = "";
-$email = "";
-$pass="";
-$categoria = "";
-$categoria2 = "";
-$categoria3="";
-
+// Verificar si se enviaron datos del formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = isset($_POST['name']) ? $_POST['name'] : '';
+    $email = isset($_POST['email']) ? $_POST['email'] : '';
+    echo $_POST['pass'];
+    $password = isset($_POST['pass']);
 
+    // Insertar el nuevo usuario en la tabla `usuarios`
+    $sql_insert_usuario = "INSERT INTO user (name, email, password) VALUES ('$name', '$email', '$password')";
+    if ($conexion->query($sql_insert_usuario) === TRUE) {
+        $id_usuario = $conexion->insert_id;  // Obtener el ID del usuario recién registrado
 
-    if (empty($_POST["name"])) {
-        $nameerror = "nombre es requerido";
-    } else {
-        $name = test_input($_POST["name"]);
-
-        if (!preg_match("/^[a-zA-Z ]*$/", $name)) {
-            $nameerror = "solo texto";
+        // Verificar si se seleccionaron categorías y registrar las preferencias
+        if (!empty($_POST['categorias'])) {
+            foreach ($_POST['categorias'] as $categoria) {
+                $sql_insert_preferencia = "INSERT INTO preferencia_usuario (id_user, categoria) VALUES ('$id_usuario', '$categoria')";
+                $conexion->query($sql_insert_preferencia);
+            }
         }
-    }
 
-    
-    if (empty($_POST["pass"])) {
-        $passerror = "contraseña es requerida";
-    }else {
-        $pass = test_input($_POST["pass"]);
-    }
-
-    if (empty($_POST["email"])) {
-        $emailerror = "correo es requerido";
+        echo "Registro exitoso. ¡Gracias por registrarte!";
     } else {
-        $email = test_input($_POST["email"]);
-
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $emailerror = "Invalid email format";
-        }
+        echo "Error al registrar el usuario: " . $conexion->error;
     }
-
-
-function test_input($data)
-{
-    $data = trim($data);
-    $data = stripslashes($data);
-    return $data;
+} else {
+    echo "Error: Método de solicitud incorrecto.";
 }
-echo $name,$email,$pass,$categoria,$categoria2,$categoria3;
 
-$sql = "INSERT INTO user ('name', 'email', 'password', 'id_categoria1', 'id_categoria2', 'id_categoria3') VALUES ('$name', '$email', '$pass', '$categoria', '$categoria2', '$categoria3');
-if ($conexion->query($sql) === TRUE) { 
-    echo "Nuevo registro creado correctamente"; 
-    header("location:login.php");
-} else { 
-    echo "Error: " . $sql . "<br>" . $conexion->error; 
-} 
-
+// Cerrar la conexión
+$conexion->close();
 ?>
