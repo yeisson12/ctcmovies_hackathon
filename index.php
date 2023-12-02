@@ -104,7 +104,7 @@
     </section>
 
     <section>
-      <div class="pelicula" id="movie-cards">
+      <div class="pelicula" id="movie-cards ">
         <p id="moviePlot1"></p>
         <p id="moviePlot"></p>
         <p id="movieDirector"></p>

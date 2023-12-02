@@ -118,6 +118,10 @@ function showDetails(movieId, youtubeID) {
             // Manejo de errores
         });
 }
+var pelicula = document.getElementById("pelicard");
 
-
-
+// Agrega un evento de clic al elemento de la película
+pelicula.addEventListener("click", function() {
+  // Redirige a la URL del video cuando se hace clic en la película
+  window.location.href = "https://www.youtube.com/watch?v=M8CPW0EBqX8";
+});
