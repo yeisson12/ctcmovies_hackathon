@@ -23,13 +23,18 @@ display: none;
 }
 
 .btn-buscar{
+    border-radius: 20px;
     margin-right: 10px;
     height: 40px;
 }
 
+.form-control{
+    border-radius: 30px;
+}
+
 button {
     border-style: none;
-    border-radius: 4px;
+    border-radius: 10px;
     transition: 0.5s;
     padding: 7px 14px;
 }
@@ -55,7 +60,7 @@ a {
 }
 
 .categoria {
-    width: 70%;
+    width: 100%;
 }
 
 .pelicula {

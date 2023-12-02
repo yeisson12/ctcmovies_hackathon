@@ -95,6 +95,11 @@
             <a class="cag" href="">Suspenso</a>
           </button>
         </il>
+        <il class="scrolling-card">
+          <button>
+            <a class="cag" href="">Documento</a>
+          </button>
+        </il>
       </ul>
     </section>
 
@@ -120,8 +125,6 @@
               </div>
               <div class="overlay">
               </div>
-              <div class="prev" onclick="prevSlide4()">&#10094;</div>
-              <div class="next" onclick="nextSlide4()">&#10095;</div>
           </div>
       </div>
     </section>
