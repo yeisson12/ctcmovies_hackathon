@@ -1,9 +1,10 @@
 * {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
 }
 header{
-    background-color: rgb(233, 233, 233);
+    background-color: whitesmoke;
 }
 .scrolling-container {
     display: flex;
@@ -104,7 +105,7 @@ a {
 }
 
 footer {
-    background-color: rgb(233, 233, 233);
+    background-color: whitesmoke;
 }
 
 
