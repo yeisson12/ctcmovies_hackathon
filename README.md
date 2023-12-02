@@ -28,7 +28,7 @@ La función obtenerIdYoutube realiza una solicitud a la API de YouTube para obte
 La función generateMovieCards crea tarjetas de películas dinámicamente y las muestra en la interfaz de usuario, con información como título, año y un botón para ver detalles.
 
 5. Ver Detalles y Ver Tráiler (showDetails y watchTrailer)
-Estas funciones permiten al usuario ver detalles completos de una película, incluida la trama, el director, el elenco y la calificación IMDb. También se proporciona un enlace para ver el tráiler de YouTube.
+Estas funciones permiten al usuario ver detalles completos de una película, incluida la trama, el director, el elenco y la calificación OMDB. También se proporciona un enlace para ver el tráiler de YouTube.
 
 # Interfaz de Usuario
 La interfaz de usuario incluye una barra de navegación, una sección para seleccionar categorías, una barra de búsqueda, y una sección para mostrar las tarjetas de películas. Se utiliza Bootstrap para mejorar el diseño y la responsividad.
