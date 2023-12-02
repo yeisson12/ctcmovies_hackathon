@@ -7,14 +7,17 @@ function buscarPeliculas() {
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
-            generateMovieCards(data.Search);
+            if (data.Response === 'True') {
+                generateMovieCards(data.Search);
+            } else {
+                displayError('No se encontraron resultados');
+            }
         })
         .catch(error => {
             console.error('Error en la solicitud a la API:', error);
             displayError('Error en la conexión a la API');
         });
 }
-
 function generateMovieCards(movies) {
     const movieCardsContainer = document.querySelector('#movie-cards');
     movieCardsContainer.innerHTML = '';
@@ -29,39 +32,37 @@ function generateMovieCards(movies) {
                     <div class="card">
                         <h5 class="Titulo">${movie.Title} (${movie.Year})</h5>
                         <p class="t_pelicula">Type: ${movie.Type}</p>
-                        <p class="descripcion">${movie.Plot}</p>
+                        <button class="view-details" onclick="showDetails('${movie.imdbID}')">Ver Detalles</button>
                     </div>
                 </div>
             `;
-
-            // Agregar evento de hover para mostrar detalles
-            cardCol.addEventListener('mouseover', () => showDetails(movie.imdbID));
-
             movieCardsContainer.appendChild(cardCol);
         });
     } else {
         displayError('No se encontraron resultados');
     }
 }
-
 function showDetails(movieId) {
     const apiUrl = `http://www.omdbapi.com/?apikey=${apiKey}&i=${movieId}`;
 
     fetch(apiUrl)
         .then(response => response.json())
         .then(movie => {
-            document.querySelector('#moviePlot').textContent = `Descripcion ${movie.Plot}`;
-            const detail=movie.Plot;
-            detail.innerHTML;
-            
+            // Llenar elementos en el modal con la información de la película
+
+            document.getElementById('movieTitle').textContent = `${movie.Title} (${movie.Year})`;
+            document.getElementById('moviePlot').textContent = `Descripción: ${movie.Plot}`;
+            document.getElementById('movieDirector').textContent = `Director: ${movie.Director}`;
+            document.getElementById('movieCast').textContent = `Reparto: ${movie.Actors}`;
+            document.getElementById('movieRating').textContent = `Calificación IMDB: ${movie.imdbRating}`;
+
+            // Mostrar el modal
+            const movieDetailsModal = new bootstrap.Modal(document.getElementById('movieDetailsModal'));
+            movieDetailsModal.show();
         })
         .catch(error => {
             console.error('Error al obtener detalles de la película:', error);
-            displayError('Error al obtener detalles de la película');
+            // Manejo de errores
         });
 }
 
-function displayError(message) {
-    const resultadoContainer = document.querySelector('#resultado');
-    resultadoContainer.innerHTML = `<p style="color: red;">${message}</p>`;
-}
