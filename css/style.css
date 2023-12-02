@@ -110,3 +110,16 @@ footer {
 
 
 /*----------------------------------------------------------------------*/
+
+@media(max-width:528px) {
+    .container-fluid{
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-fluid img{
+        margin-bottom: 10px;
+    }
+}
