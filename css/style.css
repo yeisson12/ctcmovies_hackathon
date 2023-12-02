@@ -3,6 +3,54 @@
     padding: 0;
 }
 
+.scrolling-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.scrolling-card {
+flex: 0 0 auto;
+margin: 10px;
+text-align: center;
+}
+
+.scrolling-container::-webkit-scrollbar {
+display: none;
+}
+
+button {
+    border-style: none;
+    border-radius: 4px;
+    transition: 0.5s;
+    padding: 7px 14px;
+}
+
+button:hover{
+    background: #141414;
+    transition: 0.5s;
+
+}
+
+a { 
+    text-decoration: none;
+    color: black;
+}
+
+.cag { 
+    text-decoration: none;
+    color: black;
+}
+
+.cag:hover{
+    color: white;
+}
+
+.categoria {
+    width: 70%;
+}
+
 .pelicula {
     display: flex;
     flex-wrap: wrap;
