@@ -40,10 +40,10 @@ Explorar las tarjetas de películas y hacer clic en "Ver Detalles" para obtener 
 En la vista de detalles, hacer clic en "Ver Tráiler" para ver el tráiler de YouTube.
 
 # Tecnologías Utilizadas
-HTML5
-CSS3
-JavaScript (ES6+)
-Bootstrap
+HTML5,
+CSS3,
+JavaScript (ES6+),
+Bootstrap,
 PHP (para la autenticación)
 
 # Conclusión
