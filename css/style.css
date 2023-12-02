@@ -85,3 +85,8 @@ a {
     font-size: 0.8rem;
     color: #555;
 }
+
+.logo{
+    width: 100px;
+    height: 50px;
+}
