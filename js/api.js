@@ -30,8 +30,8 @@ function generateMovieCards(movies) {
                 <div class="card-container" id="movie-${movie.imdbID}">
                     <img src="${movie.Poster}" class="img" alt="${movie.Title} Poster">
                     <div class="card">
-                        <h5 class="Titulo">${movie.Title} (${movie.Year})</h5>
-                        <p class="t_pelicula">Type: ${movie.Type}</p>
+                        <h5 class="Titulo">${movie.Title}</h5>
+                        <h5 class="Titulo">${movie.Year}</h5>
                         <button class="view-details" onclick="showDetails('${movie.imdbID}')">Ver Detalles</button>
                     </div>
                 </div>
